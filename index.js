@@ -64,3 +64,17 @@ const bicycle = {
 
 bicycle.setGear(3);
 console.log(bicycle.gear);
+
+// Use class Syntax to Define a Constructor Function
+function makeClass() {
+  "use strict";
+  class Vegetable {
+    constructor(name){
+      this.name = name;
+    }
+  }
+  return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // => should be 'carrot'
